@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode */
+    --bg: #F7F7F7;
+    --surface: #FFFFFF;
+    --text-primary: #0B0B0B;
+    --text-secondary: #3A3A3A;
+    --accent-1: #FF1E1E;
+    --accent-2: #1F6BFF;
+    --border: #0B0B0B;
+  }
+
+  .dark {
+    /* Dark Mode */
+    --bg: #0B0B0B;
+    --surface: #161616;
+    --text-primary: #F5F5F5;
+    --text-secondary: #B3B3B3;
+    --accent-1: #FF4D4D;
+    --accent-2: #4D8CFF;
+    --border: #F5F5F5;
+  }
+
+  body {
+    @apply bg-bg text-text-primary font-sans antialiased;
+    /* NO TRANSITIONS allowed for strict brutalist feel */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-black tracking-tight text-text-primary;
+  }
+}
+
+/* Utilities managed by Tailwind Config */
