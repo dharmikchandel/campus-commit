@@ -71,7 +71,7 @@ const AdminDashboard = () => {
                     <tbody>
                         {users.map((user) => (
                             <tr key={user._id} className="border-b-3 border-text-primary font-bold hover:bg-bg/50 transition-none">
-                                <td className="p-4 border-r-3 border-text-primary">{user.username}</td>
+                                <td className="p-4 border-r-3 border-text-primary font-mono">{user.username}</td>
                                 <td className="p-4 border-r-3 border-text-primary font-mono text-sm">{user.email}</td>
                                 <td className="p-4 border-r-3 border-text-primary uppercase">
                                     <span className={`px-2 py-1 border-2 border-text-primary shadow-brutal-btn text-xs ${user.role === 'admin' ? 'bg-accent-1 text-white' :

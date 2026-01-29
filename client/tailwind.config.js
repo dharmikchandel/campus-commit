@@ -19,9 +19,9 @@ export default {
                 border: 'var(--border)',
             },
             boxShadow: {
-                'brutal-btn': '8px 8px 0px 0px var(--text-primary)',
-                'brutal-btn-hover': '10px 10px 0px 0px var(--text-primary)',
-                'brutal-btn-active': '2px 2px 0px 0px var(--text-primary)',
+                'brutal-btn': '6px 6px 0px 0px var(--text-primary)',
+                'brutal-btn-hover': '8px 8px 0px 0px var(--text-primary)',
+                'brutal-btn-active': '4px 4px 0px 0px var(--text-primary)',
                 'brutal-card': '8px 8px 0px 0px var(--text-primary)',
                 'brutal-card-hover': '12px 12px 0px 0px var(--text-primary)',
                 // Keeping generic for other uses if needed, or mapping to btn/card

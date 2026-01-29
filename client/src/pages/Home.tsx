@@ -43,7 +43,7 @@ const Home = () => {
     return (
         <div className="min-h-screen bg-bg">
             {/* Hero Section */}
-            <section className="bg-surface border-b-3 border-text-primary py-20 px-4">
+            <section className="bg-surface border-3 shadow-brutal-card border-text-primary py-20 px-4 rounded-sm">
                 <div className="max-w-7xl mx-auto text-center space-y-6">
                     <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-text-primary uppercase">
                         Welcome to <span className="text-accent-1 text-stroke">The Club</span>
