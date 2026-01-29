@@ -29,7 +29,7 @@ const Navbar = () => {
                     {/* Left Side - Logo */}
                     <div className="flex items-center">
                         <Link to="/" className="text-3xl font-black text-text-primary uppercase tracking-tighter hover:text-accent-1 transition-none decoration-4 underline-offset-4 hover:underline">
-                            NeoBlog
+                            Campus-Commit
                         </Link>
                     </div>
 
@@ -57,7 +57,7 @@ const Navbar = () => {
                                         </Link>
                                     )}
 
-                                    <div className="font-bold text-text-secondary uppercase text-sm tracking-widest ml-4">
+                                    <div className="font-bold text-text-secondary text-sm tracking-widest ml-4">
                                         {user.username}
                                     </div>
                                     <Button variant="outline" size="sm" onClick={handleLogout}>
@@ -111,7 +111,7 @@ const Navbar = () => {
                                         </Link>
                                     )}
 
-                                    <div className="font-bold text-text-secondary uppercase text-sm tracking-widest text-center">
+                                    <div className="font-extrabold text-text-secondary text-sm tracking-widest text-center">
                                         {user.username}
                                     </div>
                                     <Button variant="outline" onClick={handleLogout} className="w-full">

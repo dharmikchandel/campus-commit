@@ -16,23 +16,39 @@ export const getUsers = async (req, res, next) => {
 // @route   PUT /api/users/:id/role
 // @access  Private (Admin only)
 export const updateUserRole = async (req, res, next) => {
+    console.log('updateUserRole called with body:', req.body);
     try {
-        const user = await User.findById(req.params.id);
-
-        if (!user) {
-            res.status(404);
-            throw new Error('User not found');
-        }
-
         const { role } = req.body;
-
+        
         if (role !== 'reader' && role !== 'editor' && role !== 'admin') {
             res.status(400);
             throw new Error('Invalid role');
         }
+        // const user = await User.findById(req.params.id);
+        
+        // if (!user) {
+        //     res.status(404);
+        //     throw new Error('User not found');
+        // }
 
-        user.role = role;
-        const updatedUser = await user.save();
+
+        // user.role = role;
+        // const updatedUser = await user.save();
+
+        const updatedUser = await User.findByIdAndUpdate(
+            req.params.id,
+            { role },
+            {
+                new: true,           // return updated document
+                runValidators: true, // enforce schema validation
+            }
+        );
+
+        if (!updatedUser) {
+            res.status(404);
+            throw new Error('User not found');
+        }
+
 
         res.json({
             _id: updatedUser._id,
